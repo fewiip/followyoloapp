@@ -5,6 +5,15 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {},
+        ),
+        title: Text('Sign Up'),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         //ele torna a tela uma deslizavel, vertical eh o padrao
         child: Center(
@@ -27,19 +36,19 @@ class SignUpScreen extends StatelessWidget {
                 Card(
                   child: TextField(
                     textAlign: TextAlign.center,
-                    decoration: InputDecoration(hintText: 'Senha'),
+                    decoration: InputDecoration(hintText: 'Password'),
                     obscureText: true,
                   ),
                 ),
                 Card(
                   child: TextField(
                     textAlign: TextAlign.center,
-                    decoration: InputDecoration(hintText: 'Confirmar Senha'),
+                    decoration: InputDecoration(hintText: 'Confirm Password'),
                     obscureText: true,
                   ),
                 ),
                 ElevatedButton(
-                  child: Text('Criar Conta'),
+                  child: Text('Create Account'),
                   onPressed: () {
                     Navigator.pop(context);
                   },
@@ -48,7 +57,7 @@ class SignUpScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: Text('Fazer Login'),
+                  child: Text('Login'),
                 ),
               ],
             ),

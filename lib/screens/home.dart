@@ -21,18 +21,18 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Olá, $nomeCliente", style: TextStyle(fontSize: 20)),
+              Text("Hello, $nomeCliente", style: TextStyle(fontSize: 20)),
               customerListTile(nomeCliente),
               ElevatedButton(
-                child: Text('Alugar'),
+                child: Text('Rent'),
                 onPressed: () {},
               ),
               ElevatedButton(
-                child: Text('Chamar Administrador'),
+                child: Text('Call Admin'),
                 onPressed: () {},
               ),
               ElevatedButton(
-                child: Text('Fazer deposito'),
+                child: Text('Make Deposit'),
                 onPressed: () {},
               ),
             ],
@@ -49,8 +49,8 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.blueGrey[100],
         foregroundColor: Colors.white,
       ),
-      title: Text('Saldo:'),
-      subtitle: Text('R\$ 90,00'),
+      title: Text('Balance:'),
+      subtitle: Text('U\$ 90,00'),
     );
   }
 }

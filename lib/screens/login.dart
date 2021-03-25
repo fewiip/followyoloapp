@@ -15,6 +15,15 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blueGrey[900],
+        leading: IconButton(
+          icon: Icon(Icons.menu),
+          onPressed: () {},
+        ),
+        title: Text('Login'),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         //ele torna a tela uma deslizavel, vertical eh o padrao
         child: Center(
@@ -37,12 +46,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 Card(
                   child: TextField(
                     textAlign: TextAlign.center,
-                    decoration: InputDecoration(hintText: 'Senha'),
+                    decoration: InputDecoration(hintText: 'Password'),
                     obscureText: true,
                   ),
                 ),
                 CheckboxListTile(
-                    title: Text('Manter Logado'), //posso colocar ate uma imagem
+                    title:
+                        Text('Stay Logged In'), //posso colocar ate uma imagem
                     value: stayLoggedIn,
                     controlAffinity: ListTileControlAffinity.leading,
                     onChanged: (stayLoggedIn) {
@@ -60,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       Navigator.pushNamed(context, '/signup');
                     },
-                    child: Text('Criar Conta'))
+                    child: Text('Create Account'))
               ],
             ),
           ),
